@@ -21,6 +21,7 @@ namespace FlightSearch.Repository
                                        join a in entity.AIRLINEs on f.AIRLINE equals a.AIRLINEID
                                        join origin in entity.LOCATIONs on f.ORIGIN equals origin.LOCATIONID
                                        join destination in entity.LOCATIONs on f.DESTINATION equals destination.LOCATIONID
+                                       //where f.DEPRATUREDATE >= 
                                        select new
                                        {
                                            FLIGHTID = f.FLIGHTID,

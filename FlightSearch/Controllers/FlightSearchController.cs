@@ -13,12 +13,18 @@ namespace FlightSearch.Controllers
     {
 
         private FlightSearchRepository _flightSearchRepository;
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public FlightSearchController()
         {
             _flightSearchRepository = new FlightSearchRepository();
         }
 
-
+        /// <summary>
+        /// Perform flight search for criteria
+        /// </summary>
+        /// <returns>List of available flights</returns>
         [AcceptVerbs("GET")]
         public List<FlightSearchResponseDTO> FlightSearch()
         {
